@@ -21,6 +21,6 @@ public class Rectangle implements Figure {
 
     @Override
     public String toString() {
-        return STR."Rectangle{length=\{length}, height=\{height}, area = \{area()}}";
+        return String.valueOf((length + height) * 2);
     }
 }

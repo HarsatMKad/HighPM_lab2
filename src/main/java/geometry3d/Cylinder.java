@@ -1,6 +1,7 @@
 package geometry3d;
 
-import Exceptions.CylinderHeightException;
+import Exceptions.AreaException;
+import Exceptions.IncorrectValueException;
 import geometry2d.Figure;
 
 public class Cylinder {
@@ -9,7 +10,7 @@ public class Cylinder {
 
     public Cylinder(Figure baseFigure, double height){
         if(height <= 0){
-            throw new CylinderHeightException("Negative height value");
+            throw new AreaException("Negative height value");
         }
         base = baseFigure;
         this.height = height;
