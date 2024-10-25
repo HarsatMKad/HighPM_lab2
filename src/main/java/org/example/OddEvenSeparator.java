@@ -1,11 +1,12 @@
 package org.example;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 public class OddEvenSeparator {
-    static ArrayList<Integer> evenList = new ArrayList<>();
-    static ArrayList<Integer> oddList = new ArrayList<>();
+    private List<Integer> evenList = new LinkedList<>();
+    private List<Integer> oddList = new ArrayList<>();
 
     void addNumber(int number) {
         if(number % 2 == 0){

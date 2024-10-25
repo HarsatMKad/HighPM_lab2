@@ -1,35 +1,26 @@
 package geometry2d;
 
-import Exceptions.AreaException;
-import Exceptions.NegatiValueException;
+import Exceptions.IncorrectValueException;
 
 public class Rectangle implements Figure {
-
-    static double length;
-    static double height;
+    private final double length;
+    private final double height;
 
     public Rectangle(double len, double heig) {
-        if (len < 0 || heig < 0) {
-            throw new NegatiValueException("The sides is specified incorrectly");
+        if (len <= 0 || heig <= 0) {
+            throw new IncorrectValueException("The sides is specified incorrectly");
         }
-
         length = len;
         height = heig;
     }
 
     @Override
     public double area() {
-        double result = length * height;
-
-        if (result <= 0) {
-            throw new AreaException("Area less than or equal to zero");
-        }
-
-        return result;
+        return length * height;
     }
 
     @Override
     public String toString() {
-        return String.valueOf((length + height) * 2);
+        return STR."Rectangle{length=\{length}, height=\{height}, area = \{area()}}";
     }
 }

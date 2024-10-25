@@ -1,10 +1,11 @@
 package org.example;
 
 public class Button {
-    static int clickCount = 0;
+    private int clickCount;
 
-    int click(){
+    public void click(){
         clickCount++;
-        return clickCount;
+        System.out.println(clickCount);
+        System.out.println(clickCount);
     }
 }

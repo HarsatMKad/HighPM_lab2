@@ -1,11 +1,15 @@
 package geometry3d;
 
+import geometry2d.Circle;
+import geometry2d.Figure;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class CylinderTest {
-    Cylinder cylinder = new Cylinder(3, 2);
+    Figure circle = new Circle(3);
+
+    Cylinder cylinder = new Cylinder(circle, 2);
 
     @Test
     void volume() {

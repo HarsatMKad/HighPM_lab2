@@ -3,16 +3,10 @@ package org.example;
 import java.util.Arrays;
 
 public class Table {
-    static int[][] numberMatrix;
+    private int[][] numberMatrix;
 
     Table(int rows, int cols) {
         numberMatrix = new int[rows][cols];
-
-        for (int[] rowList : numberMatrix) {
-            for (int number : rowList) {
-                number = 0;
-            }
-        }
     }
 
     int getValue(int row, int col) {
@@ -33,13 +27,13 @@ public class Table {
 
     @Override
     public String toString() {
-        String returnString = "";
+        StringBuilder returnString = new StringBuilder();
 
         for (int[] rowList : numberMatrix) {
-            returnString += Arrays.toString(rowList);
+            returnString.append(Arrays.toString(rowList));
         }
 
-        return returnString;
+        return returnString.toString();
     }
 
     double average() {

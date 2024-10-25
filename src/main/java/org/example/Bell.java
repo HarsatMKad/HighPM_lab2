@@ -1,15 +1,15 @@
 package org.example;
 
 public class Bell {
-    static boolean soundKey = false;
+    private boolean soundKey;
 
-    String sound() {
+    public void sound() {
         if (soundKey) {
             soundKey = false;
-            return "dong";
+            System.out.println("dong");
         } else {
             soundKey = true;
-            return "ding";
+            System.out.println("ding");
         }
     }
 }

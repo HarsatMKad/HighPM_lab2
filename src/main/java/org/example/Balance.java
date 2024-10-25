@@ -1,8 +1,8 @@
 package org.example;
 
 public class Balance {
-    static int rightBowl = 0;
-    static int leftBowl = 0;
+    private int rightBowl = 0;
+    private int leftBowl = 0;
 
     void addRight(int number) {
         rightBowl += number;
@@ -15,8 +15,7 @@ public class Balance {
     String result(){
         if(rightBowl == leftBowl){
             return "=";
-        }
-        if(rightBowl > leftBowl){
+        } else if(rightBowl > leftBowl){
             return "R";
         } else {
             return "L";
